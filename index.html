@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1018">
+  <meta name="description" content="Gravity Defied Remastered — мобильный триал-рейсинг с оригинальными трассами. Управляй балансом, газом и тормозом.">
+  <title>Gravity Defied — Remastered</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <header class="topbar">
+      <button class="brand" id="homeBrand" aria-label="На главную">
+        <span class="brand-mark"><span>G</span><i></i><b>D</b></span>
+        <span class="brand-copy"><strong>GRAVITY DEFIED</strong><small>TRIAL REMASTER</small></span>
+      </button>
+      <div class="topbar-right">
+        <span class="version-chip"><span class="live-dot"></span> WEB EDITION</span>
+        <button class="icon-button" id="soundToggle" aria-label="Звук включён" title="Звук"><span id="soundGlyph">♫</span></button>
+      </div>
+    </header>
+
+    <main class="home-view" id="homeView">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ЛЕГЕНДА МОБИЛЬНОГО ТРИАЛА</div>
+          <h1>GRAVITY<br><em>DEFIED</em><span class="title-period">.</span></h1>
+          <p class="hero-description">Один байк. Сотни препятствий. Ошибка в балансе — и всё сначала.</p>
+          <div class="hero-actions">
+            <button class="primary-button" id="heroPlay"><span>НАЧАТЬ ЗАЕЗД</span><b>↗</b></button>
+            <button class="ghost-button" id="jumpToTracks">ВЫБРАТЬ ТРАССУ <span>↓</span></button>
+          </div>
+          <div class="hero-meta">
+            <div><strong>421</strong><span>ОРИГИНАЛЬНАЯ<br>ТРАССА</span></div>
+            <i></i>
+            <div><strong>03</strong><span>УРОВНЯ<br>СЛОЖНОСТИ</span></div>
+            <i></i>
+            <div><strong>∞</strong><span>ПОПЫТОК<br>НА РЕКОРД</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <div class="hero-label label-top">PHYSICS / 2D</div>
+          <div class="hero-bike-wrap">
+            <div class="hero-speed-lines"></div>
+            <svg class="hero-bike" viewBox="0 0 520 300" role="img" aria-label="Силуэт мотоцикла">
+              <defs>
+                <linearGradient id="bikePaint" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#8de8ff"/><stop offset="1" stop-color="#1486c2"/></linearGradient>
+                <filter id="bikeGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <path d="M35 248 L110 226 L200 231 L302 202 L414 210 L498 189" fill="none" stroke="#43576b" stroke-width="3"/>
+              <g transform="translate(20 -6) rotate(-9 260 180)">
+                <circle cx="153" cy="210" r="58" fill="#0a121b" stroke="#8ea0af" stroke-width="5"/><circle cx="153" cy="210" r="39" fill="none" stroke="#35495d" stroke-width="5"/><circle cx="153" cy="210" r="8" fill="#74dfff"/>
+                <circle cx="379" cy="210" r="58" fill="#0a121b" stroke="#8ea0af" stroke-width="5"/><circle cx="379" cy="210" r="39" fill="none" stroke="#35495d" stroke-width="5"/><circle cx="379" cy="210" r="8" fill="#74dfff"/>
+                <path d="M153 210 L220 153 L303 163 L379 210 M220 153 L265 210 L153 210 M265 210 L303 163" fill="none" stroke="url(#bikePaint)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#bikeGlow)"/>
+                <path d="M211 145 L251 130 L303 151 L292 168 L230 164Z" fill="#1a9dd4" stroke="#9aeaff" stroke-width="3"/>
+                <path d="M242 125 L301 128 L334 145 L315 154 L273 145Z" fill="#111b27" stroke="#6ccff4" stroke-width="4"/>
+                <path d="M304 158 L363 143 L390 154 L379 167 L325 176Z" fill="#12202d" stroke="#64d6ff" stroke-width="4"/>
+                <path d="M379 210 L411 129 L431 124 M411 129 L430 144" fill="none" stroke="#b4d5e2" stroke-width="7" stroke-linecap="round"/>
+                <path d="M196 130 Q207 91 250 89 L286 113 L299 138 L275 150 L239 128 L211 151Z" fill="#1688bd" stroke="#9ce9ff" stroke-width="3"/>
+                <path d="M212 103 Q224 51 265 43 Q296 48 307 74 L290 99 L250 108Z" fill="#f1a553" stroke="#ffd69d" stroke-width="4"/>
+                <path d="M261 48 Q294 34 316 58 L311 78 L291 82 L283 67Z" fill="#152231" stroke="#92e6ff" stroke-width="3"/>
+                <path d="M231 120 L198 164 L177 187" fill="none" stroke="#e4b27a" stroke-width="12" stroke-linecap="round"/>
+                <path d="M231 120 L269 155 L303 157" fill="none" stroke="#e4b27a" stroke-width="12" stroke-linecap="round"/>
+                <path d="M242 130 L205 182 L245 206" fill="none" stroke="#176d9e" stroke-width="17" stroke-linecap="round"/>
+                <path d="M245 206 L296 195 L320 210" fill="none" stroke="#176d9e" stroke-width="17" stroke-linecap="round"/>
+                <path d="M295 154 L314 143 L333 148" fill="none" stroke="#e4b27a" stroke-width="8" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="hero-label label-bottom">KEEP YOUR BALANCE <b>///</b></div>
+          <div class="hero-coordinate">42° 06' 12.4" N<br>TRIAL ZONE / 001</div>
+        </div>
+        <div class="hero-bottom-line"><span>EST. 2004</span><span>REBUILT FOR TOUCHSCREENS</span><span>NO NITRO. JUST SKILL.</span></div>
+      </section>
+
+      <section class="continue-strip" id="continueStrip" hidden>
+        <div class="continue-icon">↗</div>
+        <div class="continue-copy"><span>ПОСЛЕДНИЙ ЗАЕЗД</span><strong id="continueName">BEGINING...</strong></div>
+        <button class="continue-button" id="continuePlay">ПРОДОЛЖИТЬ <b>→</b></button>
+      </section>
+
+      <section class="tracks-section" id="tracksSection">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> TRACK SELECT</div><h2>ВЫБЕРИ <em>ТРАССУ</em></h2></div>
+          <div class="section-count"><strong id="visibleCount">140</strong><span>TRACKS<br>AVAILABLE</span></div>
+        </div>
+        <div class="track-toolbar">
+          <div class="category-tabs" role="tablist" aria-label="Сложность">
+            <button class="category-tab active" data-category="0" role="tab" aria-selected="true"><span class="tab-dot easy"></span> ЛЁГКИЕ <small>01</small></button>
+            <button class="category-tab" data-category="1" role="tab" aria-selected="false"><span class="tab-dot medium"></span> СРЕДНИЕ <small>02</small></button>
+            <button class="category-tab" data-category="2" role="tab" aria-selected="false"><span class="tab-dot hard"></span> СЛОЖНЫЕ <small>03</small></button>
+          </div>
+          <label class="search-box"><span>⌕</span><input id="trackSearch" type="search" placeholder="Найти трассу..." autocomplete="off"><kbd>/</kbd></label>
+        </div>
+        <div class="track-list-head"><span>НАЗВАНИЕ ТРАССЫ</span><span>ЛУЧШЕЕ ВРЕМЯ</span><span>СТАТУС</span></div>
+        <div class="track-list" id="trackList" aria-live="polite"></div>
+        <div class="track-footer"><span><i></i> ВСЕ ТРАССЫ СОХРАНЕНЫ ИЗ ОРИГИНАЛЬНОГО АРХИВА</span><span id="listPageText">01 — 140</span></div>
+      </section>
+      <footer class="footer"><span>GRAVITY DEFIED / TRIAL REMASTER</span><span>BUILT FOR THE NEXT GENERATION OF RIDERS <b>↗</b></span></footer>
+    </main>
+
+    <main class="game-view" id="gameView" hidden>
+      <div class="game-topbar">
+        <button class="back-button" id="backHome"><span>←</span><small>В МЕНЮ</small></button>
+        <div class="game-level-title"><span id="gameCategory">ЛЁГКАЯ ТРАССА · 001</span><strong id="gameLevelName">BEGINING...</strong></div>
+        <button class="pause-button" id="pauseButton" aria-label="Пауза"><span>Ⅱ</span></button>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><small>ВРЕМЯ</small><strong id="timeStat">00:00.00</strong></div>
+        <div class="stat"><small>СКОРОСТЬ</small><strong><span id="speedStat">0</span><i> KM/H</i></strong></div>
+        <div class="stat progress-stat"><small>ДИСТАНЦИЯ</small><strong id="distanceStat">0<span>%</span></strong><div class="progress-track"><i id="progressBar"></i></div></div>
+      </div>
+      <div class="game-stage" id="gameStage">
+        <canvas id="gameCanvas" aria-label="Игровая трасса Gravity Defied"></canvas>
+        <div class="canvas-hint" id="canvasHint"><span class="hint-cross">＋</span> ДЕРЖИ ГАЗ И КОНТРОЛИРУЙ НАКЛОН</div>
+        <div class="countdown-overlay" id="countdownOverlay" hidden>3</div>
+      </div>
+      <div class="game-bottom">
+        <div class="control-labels"><span>БАЛАНС</span><span>ДВИЖЕНИЕ</span></div>
+        <div class="control-deck">
+          <button class="control-button lean-control" data-control="leanBack" aria-label="Наклон назад"><span>↶</span><small>НАЗАД</small></button>
+          <button class="control-button brake-control" data-control="brake" aria-label="Тормоз"><span>Ⅱ</span><small>ТОРМОЗ</small></button>
+          <button class="control-button gas-control" data-control="throttle" aria-label="Газ"><span>⌁</span><small>ГАЗ</small></button>
+          <button class="control-button lean-control" data-control="leanForward" aria-label="Наклон вперёд"><span>↷</span><small>ВПЕРЁД</small></button>
+        </div>
+        <div class="control-footnote"><span>HOLD TO CONTROL</span><span>WASD / ARROWS ALSO WORK</span></div>
+      </div>
+      <div class="modal-backdrop" id="pauseModal" hidden>
+        <div class="modal-card">
+          <div class="modal-kicker">RIDE PAUSED / 00</div><h2>ПЕРЕДЫШКА<span>.</span></h2><p>Байк никуда не денется. Продолжим, когда будешь готов.</p>
+          <button class="primary-button modal-primary" id="resumeButton"><span>ПРОДОЛЖИТЬ</span><b>▶</b></button>
+          <button class="modal-secondary" id="restartFromPause">НАЧАТЬ ЗАНОВО</button>
+          <button class="modal-secondary" id="exitFromPause">ВЫЙТИ К ТРАССАМ</button>
+        </div>
+      </div>
+      <div class="modal-backdrop" id="resultModal" hidden>
+        <div class="modal-card result-card">
+          <div class="modal-kicker" id="resultKicker">RUN COMPLETE / 01</div><div class="result-icon" id="resultIcon">✦</div>
+          <h2 id="resultTitle">ТРАССА ПРОЙДЕНА<span>!</span></h2><p id="resultText">Чистый заезд. Хорошая работа.</p>
+          <div class="result-metrics"><div><small>ВРЕМЯ</small><strong id="resultTime">00:00.00</strong></div><div><small>РЕКОРД</small><strong id="resultBest">NEW BEST</strong></div></div>
+          <button class="primary-button modal-primary" id="retryButton"><span>ЕЩЁ ОДНА ПОПЫТКА</span><b>↻</b></button>
+          <button class="modal-secondary" id="nextButton">СЛЕДУЮЩАЯ ТРАССА →</button>
+          <button class="modal-secondary" id="resultHomeButton">ВЫБРАТЬ ДРУГУЮ ТРАССУ</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./game.js" defer></script>
+</body>
+</html>
